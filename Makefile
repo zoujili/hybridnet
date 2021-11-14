@@ -1,6 +1,6 @@
 REGISTRY=github/oecp
-ARCHS?=amd64 arm64
-DEV_TAG?=dev
+ARCHS?=amd64
+DEV_TAG?=dev_xizhe
 RELEASE_TAG?=release
 
 .PHONY: build-dev-images release

@@ -452,7 +452,7 @@ func (c *Controller) iptablesSyncLoop() {
 						c.iptablesV4Manager.RecordNodeIP(ip)
 					} else {
 						// v6 address
-						c.iptablesV6Manager.RecordNodeIP(ip)
+						// c.iptablesV6Manager.RecordNodeIP(ip)
 					}
 				}
 			}
@@ -482,9 +482,9 @@ func (c *Controller) iptablesSyncLoop() {
 				return fmt.Errorf("sync v4 iptables rule failed: %v", err)
 			}
 
-			if err := c.iptablesV6Manager.SyncRules(); err != nil {
-				return fmt.Errorf("sync v6 iptables rule failed: %v", err)
-			}
+			//if err := c.iptablesV6Manager.SyncRules(); err != nil {
+			//	return fmt.Errorf("sync v6 iptables rule failed: %v", err)
+			//}
 		}
 
 		return nil
